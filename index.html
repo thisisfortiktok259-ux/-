@@ -3,11 +3,26 @@
   <head>
     <meta charset=UTF-8>
     <meta name=viewport content='width=device-width, initial-scale=1.0'>
-    <title>Кубомир</title>
+    <title>Погоня</title>
   </head>
   <body>
-    <canvas id=game></canvas>
-    <div id=ui></div>
-    <script type=module src=/src/main.ts></script>
+    <canvas id=scene></canvas>
+    <div id=mirror hidden></div>
+    <div id=hud>
+      <div id=title>ПОГОНЯ</div>
+      <div id=speed></div>
+      <div id=dist></div>
+      <div id=mode></div>
+      <div id=hint>C или клик: сменить камеру · M: звук</div>
+    </div>
+    <div id=start>
+      <div class=box>
+        <h1>Погоня</h1>
+        <p>Ночь. Пустая трасса. В зеркале заднего вида кто-то есть...</p>
+        <button id=go type=button>Начать</button>
+      </div>
+    </div>
+    <a id=game-link href=game.html>Играть в Кубомир</a>
+    <script type=module src=/src/chase/main.ts></script>
   </body>
 </html>

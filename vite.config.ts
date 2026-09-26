@@ -3,5 +3,14 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   base: './',
   worker: { format: 'es' },
-  build: { target: 'es2020', chunkSizeWarningLimit: 1500 },
+  build: {
+    target: 'es2020',
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        game: 'game.html',
+      },
+    },
+  },
 });
